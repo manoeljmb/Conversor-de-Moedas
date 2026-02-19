@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="currency-box">
+  <h2>Conversor de Moedas</h2>
+  <p class="subtitle">Converta valores em tempo real usando cotação atual.</p>
+
+  <div class="currency-grid">
+    <div class="field">
+      <label>Valor</label>
+      <input type="number" id="amount" placeholder="Ex: 100" value="1" />
+    </div>
+
+    <div class="field">
+      <label>De</label>
+      <select id="from">
+  <option value="BRL" selected>BRL - Real Brasileiro</option>
+  <option value="USD">USD - Dólar Americano</option>
+  <option value="EUR">EUR - Euro</option>
+  <option value="GBP">GBP - Libra Esterlina</option>
+  <option value="JPY">JPY - Iene Japonês</option>
+  <option value="CAD">CAD - Dólar Canadense</option>
+  <option value="AUD">AUD - Dólar Australiano</option>
+  <option value="CHF">CHF - Franco Suíço</option>
+  <option value="CNY">CNY - Yuan Chinês</option>
+  <option value="HKD">HKD - Dólar de Hong Kong</option>
+  <option value="NZD">NZD - Dólar Neozelandês</option>
+  <option value="SEK">SEK - Coroa Sueca</option>
+  <option value="NOK">NOK - Coroa Norueguesa</option>
+  <option value="DKK">DKK - Coroa Dinamarquesa</option>
+  <option value="MXN">MXN - Peso Mexicano</option>
+  <option value="ARS">ARS - Peso Argentino</option>
+  <option value="CLP">CLP - Peso Chileno</option>
+  <option value="COP">COP - Peso Colombiano</option>
+  <option value="PEN">PEN - Sol Peruano</option>
+  <option value="UYU">UYU - Peso Uruguaio</option>
+  <option value="PYG">PYG - Guarani Paraguaio</option>
+  <option value="BOB">BOB - Boliviano</option>
+  <option value="ZAR">ZAR - Rand Sul-Africano</option>
+  <option value="INR">INR - Rupia Indiana</option>
+  <option value="KRW">KRW - Won Sul-Coreano</option>
+  <option value="SGD">SGD - Dólar de Singapura</option>
+  <option value="MYR">MYR - Ringgit Malaio</option>
+  <option value="THB">THB - Baht Tailandês</option>
+  <option value="IDR">IDR - Rupia Indonésia</option>
+  <option value="PHP">PHP - Peso Filipino</option>
+  <option value="VND">VND - Dong Vietnamita</option>
+  <option value="TRY">TRY - Lira Turca</option>
+  <option value="ILS">ILS - Novo Shekel Israelense</option>
+  <option value="AED">AED - Dirham Emiradense</option>
+  <option value="SAR">SAR - Riyal Saudita</option>
+  <option value="QAR">QAR - Riyal do Catar</option>
+  <option value="KWD">KWD - Dinar Kuwaitiano</option>
+  <option value="EGP">EGP - Libra Egípcia</option>
+  <option value="MAD">MAD - Dirham Marroquino</option>
+  <option value="TND">TND - Dinar Tunisiano</option>
+  <option value="NGN">NGN - Naira Nigeriana</option>
+  <option value="KES">KES - Xelim Queniano</option>
+  <option value="GHS">GHS - Cedi Ganês</option>
+  <option value="RUB">RUB - Rublo Russo</option>
+  <option value="UAH">UAH - Hryvnia Ucraniana</option>
+  <option value="PLN">PLN - Zloty Polonês</option>
+  <option value="CZK">CZK - Coroa Tcheca</option>
+  <option value="HUF">HUF - Forint Húngaro</option>
+  <option value="RON">RON - Leu Romeno</option>
+  <option value="BGN">BGN - Lev Búlgaro</option>
+</select>
+
+    </div>
+
+    <div class="field">
+      <label>Para</label>
+      <select id="to">
+  <option value="USD" selected>USD - Dólar Americano</option>
+  <option value="BRL">BRL - Real Brasileiro</option>
+  <option value="EUR">EUR - Euro</option>
+  <option value="GBP">GBP - Libra Esterlina</option>
+  <option value="JPY">JPY - Iene Japonês</option>
+  <option value="CAD">CAD - Dólar Canadense</option>
+  <option value="AUD">AUD - Dólar Australiano</option>
+  <option value="CHF">CHF - Franco Suíço</option>
+  <option value="CNY">CNY - Yuan Chinês</option>
+  <option value="HKD">HKD - Dólar de Hong Kong</option>
+  <option value="NZD">NZD - Dólar Neozelandês</option>
+  <option value="SEK">SEK - Coroa Sueca</option>
+  <option value="NOK">NOK - Coroa Norueguesa</option>
+  <option value="DKK">DKK - Coroa Dinamarquesa</option>
+  <option value="MXN">MXN - Peso Mexicano</option>
+  <option value="ARS">ARS - Peso Argentino</option>
+  <option value="CLP">CLP - Peso Chileno</option>
+  <option value="COP">COP - Peso Colombiano</option>
+  <option value="PEN">PEN - Sol Peruano</option>
+  <option value="UYU">UYU - Peso Uruguaio</option>
+  <option value="PYG">PYG - Guarani Paraguaio</option>
+  <option value="BOB">BOB - Boliviano</option>
+  <option value="ZAR">ZAR - Rand Sul-Africano</option>
+  <option value="INR">INR - Rupia Indiana</option>
+  <option value="KRW">KRW - Won Sul-Coreano</option>
+  <option value="SGD">SGD - Dólar de Singapura</option>
+  <option value="MYR">MYR - Ringgit Malaio</option>
+  <option value="THB">THB - Baht Tailandês</option>
+  <option value="IDR">IDR - Rupia Indonésia</option>
+  <option value="PHP">PHP - Peso Filipino</option>
+  <option value="VND">VND - Dong Vietnamita</option>
+  <option value="TRY">TRY - Lira Turca</option>
+  <option value="ILS">ILS - Novo Shekel Israelense</option>
+  <option value="AED">AED - Dirham Emiradense</option>
+  <option value="SAR">SAR - Riyal Saudita</option>
+  <option value="QAR">QAR - Riyal do Catar</option>
+  <option value="KWD">KWD - Dinar Kuwaitiano</option>
+  <option value="EGP">EGP - Libra Egípcia</option>
+  <option value="MAD">MAD - Dirham Marroquino</option>
+  <option value="TND">TND - Dinar Tunisiano</option>
+  <option value="NGN">NGN - Naira Nigeriana</option>
+  <option value="KES">KES - Xelim Queniano</option>
+  <option value="GHS">GHS - Cedi Ganês</option>
+  <option value="RUB">RUB - Rublo Russo</option>
+  <option value="UAH">UAH - Hryvnia Ucraniana</option>
+  <option value="PLN">PLN - Zloty Polonês</option>
+  <option value="CZK">CZK - Coroa Tcheca</option>
+  <option value="HUF">HUF - Forint Húngaro</option>
+  <option value="RON">RON - Leu Romeno</option>
+  <option value="BGN">BGN - Lev Búlgaro</option>
+</select>
+
+    </div>
+  </div>
+  <div class="field full">
+    <button class="btn-swap" id="swapBtn">🔄 Inverter</button>
+  </div>
+  <button class="btn-convert" id="convertBtn">Converter</button>
+
+<button class="btn-fav" id="saveFavBtn">⭐ Salvar como favorito</button>
+
+<div class="quick-box">
+  <p class="quick-title">Conversões rápidas:</p>
+
+  <div class="quick-buttons">
+    <button class="quick-btn" data-from="BRL" data-to="USD">BRL → USD</button>
+    <button class="quick-btn" data-from="USD" data-to="BRL">USD → BRL</button>
+    <button class="quick-btn" data-from="BRL" data-to="EUR">BRL → EUR</button>
+    <button class="quick-btn" data-from="EUR" data-to="BRL">EUR → BRL</button>
+    <button class="quick-btn" data-from="BRL" data-to="GBP">BRL → GBP</button>
+    <button class="quick-btn" data-from="USD" data-to="EUR">USD → EUR</button>
+  </div>
+</div>
+
+
+<div class="favorites-box">
+  <p class="favorites-title">Favoritos:</p>
+  <div id="favoritesList"></div>
+</div>
+
+
+  <div class="result-box">
+    <p class="result-title">Resultado:</p>
+    <p class="result" id="result">Carregando...</p>
+    <button class="btn-copy" id="copyBtn">📋 Copiar resultado</button>
+    <p class="copy-msg" id="copyMsg"></p>
+
+    <p class="rate" id="rateInfo"></p>
+    <p class="updated" id="updatedInfo"></p>
+    <p class="details" id="detailsInfo"></p>
+    <p class="inverse" id="inverseInfo"></p>
+
+  </div>
+
+  <p class="footer-note">
+    Cotação baseada em dados públicos. Pode haver pequenas variações.
+  </p>
+
+<div class="seo-box">
+  <h3>Como funciona o conversor de moedas?</h3>
+  <p>
+    O conversor de moedas permite transformar valores de uma moeda para outra com base na cotação atual do mercado.
+    Ele utiliza a taxa de câmbio atualizada para calcular automaticamente quanto vale um valor em Real, Dólar, Euro,
+    Libra e outras moedas internacionais.
+  </p>
+
+  <h3>Como converter dólar para real?</h3>
+  <p>
+    Para converter dólar em real, selecione <strong>USD</strong> no campo "De" e <strong>BRL</strong> no campo "Para".
+    Depois, digite o valor desejado e o sistema mostrará o resultado em tempo real com a taxa atual.
+  </p>
+
+  <h3>Por que a cotação pode variar?</h3>
+  <p>
+    A cotação do câmbio muda constantemente por fatores como inflação, decisões econômicas, juros e movimentação de mercado.
+    Por isso, o valor exibido pode sofrer pequenas variações ao longo do dia.
+  </p>
+
+  <h3>Moedas disponíveis no conversor</h3>
+  <p>
+    Nosso conversor permite calcular valores em diversas moedas como Real (BRL), Dólar (USD), Euro (EUR), Libra (GBP),
+    Iene (JPY), Peso Argentino (ARS) e muitas outras.
+  </p>
+
+  <h3>Dicas para usar o conversor de moedas</h3>
+  <ul>
+    <li>Use o botão <strong>Inverter</strong> para trocar rapidamente as moedas.</li>
+    <li>Salve pares frequentes em <strong>Favoritos</strong> para conversões rápidas.</li>
+    <li>Confira sempre o horário da última atualização da cotação.</li>
+  </ul>
+</div>
+
+
+</div>
+  <div class="currency-box">
+    ...
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
