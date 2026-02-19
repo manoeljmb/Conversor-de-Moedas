@@ -1,331 +1,252 @@
-Conversor de Moedas (Português)
+💱 Currency Converter
 
-📌 Visão Geral
+<p align="center">
+  Conversor de Moedas em Tempo Real • HTML • CSS • JavaScript
+</p>
 
-O Conversor de Moedas é uma aplicação web desenvolvida em HTML, CSS e JavaScript puro que permite converter valores entre mais de 50 moedas internacionais em tempo real.
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Ativo-22c55e">
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-f7df1e">
+  <img src="https://img.shields.io/badge/HTML5-Frontend-e34f26">
+  <img src="https://img.shields.io/badge/CSS3-Styling-1572b6">
+</p>
 
-A aplicação consome dados de uma API pública de câmbio e oferece uma experiência moderna, responsiva e otimizada para usabilidade.
+---
 
-🚀 Funcionalidades
-✅ Conversão em Tempo Real
+## 📌 Sobre o Projeto
 
-Conversão automática baseada na taxa atual da moeda.
+O **Currency Converter** é uma aplicação web moderna para conversão de moedas em tempo real, construída com JavaScript puro e integração com API pública de câmbio.
 
-Atualização imediata ao alterar valor ou moeda.
+O projeto foi desenvolvido com foco em:
 
-Conversão automática ao pressionar Enter.
+* Experiência do usuário
+* Performance
+* Código organizado
+* Responsividade
+* Persistência local
 
-🔄 Botão Inverter Moedas
+---
 
-Permite alternar rapidamente entre moeda de origem e destino.
+## 🚀 Funcionalidades
 
-Atualiza o cálculo automaticamente após a inversão.
+### 🔄 Conversão em Tempo Real
 
-⭐ Sistema de Favoritos
+* Conversão automática baseada na taxa atual.
+* Atualização ao alterar valor ou moeda.
+* Conversão ao pressionar **Enter**.
+* Validação de entrada.
 
-Salvar pares de moedas frequentes.
+---
 
-Persistência via localStorage.
+### 🔁 Inverter Moedas
 
-Botão para carregar favorito.
+* Troca instantânea entre moeda origem e destino com recálculo automático.
 
-Botão para remover favorito.
+---
 
-Prevenção de duplicação.
+### ⭐ Sistema de Favoritos
 
-⚡ Conversões Rápidas
+* Salva pares de moedas frequentes.
+* Armazenamento via `localStorage`.
+* Carregar ou remover favorito.
+* Prevenção contra duplicação.
 
-Botões pré-configurados para:
+---
 
-BRL → USD
+### ⚡ Conversões Rápidas
 
-USD → BRL
+- Botões pré-configurados:
 
-BRL → EUR
+* BRL → USD
+* USD → BRL
+* BRL → EUR
+* EUR → BRL
+* BRL → GBP
+* USD → EUR
 
-EUR → BRL
+---
 
-BRL → GBP
+### 📋 Copiar Resultado
 
-USD → EUR
+* Copia o valor convertido com 1 clique.
+* Feedback visual.
+* Compatível com navegadores modernos e antigos.
 
-A troca ocorre com um clique e recalcula automaticamente.
+---
 
-📋 Botão Copiar Resultado
+### 📊 Informações Detalhadas
 
-Copia o valor convertido com 1 clique.
+Após cada conversão o sistema exibe:
 
-Feedback visual “Copiado!”.
+* Valor convertido
+* Taxa atual aplicada
+* Cálculo detalhado
+* Conversão inversa
+* Data e hora da atualização
 
-Implementação com:
+---
 
-navigator.clipboard (moderno)
+### 🌍 50+ Moedas Suportadas
 
-fallback com execCommand (compatibilidade)
+Inclui moedas das Américas, Europa, Ásia, África e Oriente Médio.
 
-📊 Informações Detalhadas da Conversão
+---
 
-Após cada cálculo, o sistema exibe:
+## 🧱 Tecnologias Utilizadas
 
-Valor convertido
+```bash
+* HTML5
+* CSS3
+* JavaScript (ES6+)
+* Fetch API
+* LocalStorage
+* Exchange Rate API
+```
 
-Taxa atual aplicada
-Ex: 1 BRL = 0.2012 USD
+---
 
-Cálculo detalhado
-Ex: 100 BRL × 0.201200 = 20.12 USD
+## 🗂 Estrutura do Projeto
 
-Conversão inversa
-Ex: 1 USD = 4.97 BRL
-
-Data e hora da atualização
-
-🌍 Suporte a 50+ Moedas
-
-Inclui moedas como:
-
-BRL, USD, EUR, GBP, JPY
-
-CAD, AUD, CHF
-
-MXN, ARS, CLP
-
-INR, KRW, SGD
-
-AED, SAR, TRY
-
-PLN, CZK, HUF
-
-e diversas outras
-
-📱 Design Responsivo
-
-Layout adaptável para mobile.
-
-Grid responsivo.
-
-Interface moderna em tema escuro.
-
-🔎 SEO Integrado
-
-Inclui seção otimizada com:
-
-Conteúdo explicativo sobre câmbio
-
-Perguntas frequentes
-
-Uso estratégico de palavras-chave
-
-🧱 Tecnologias Utilizadas
-
-HTML5
-
-CSS3
-
-JavaScript (ES6+)
-
-LocalStorage
-
-Fetch API
-
-Exchange Rate API (dados de câmbio)
-
-🗂 Estrutura do Projeto
-conversor-moedas/
+```
+currency-converter/
 │
 ├── index.html
 ├── style.css
 └── script.js
+```
 
-🧠 Lógica Principal
+---
 
-Usuário insere valor.
+## 🧠 Fluxo da Aplicação
 
-Sistema captura moeda origem/destino.
+1. Usuário insere valor.
+2. Seleciona moedas.
+3. Sistema faz requisição via `fetch`.
+4. API retorna taxa.
+5. Conversão é calculada.
+6. Interface é atualizada.
+7. Favoritos são persistidos.
 
-Requisição via fetch() para API.
+---
 
-Cálculo com base na taxa retornada.
+## 📱 Responsividade
 
-Atualização da interface.
+* Layout adaptável
+* Interface moderna
+* Design em tema escuro
 
-Persistência de favoritos no navegador.
+---
 
-📌 Possíveis Melhorias Futuras
+## 📌 Melhorias Futuras
 
-Gráfico de variação histórica
+* Gráfico histórico
+* Cache de taxa
+* PWA
+* Histórico de conversões
+* Modo claro/escuro
+* Internacionalização
 
-Cache de cotação por tempo definido
+---
 
-PWA (instalável)
+---
 
-Histórico de conversões
+# 💱 Currency Converter (English Version)
 
-Modo claro/escuro com toggle
+<p align="center">
+  Real-Time Currency Converter • HTML • CSS • JavaScript
+</p>
 
---------------------------------------------------------------------------------------------------------------
+---
 
-Currency Converter (English Version)
+## 📌 About the Project
 
-📌 Overview
+A modern real-time currency converter built with vanilla JavaScript and powered by a public exchange rate API.
 
-The Currency Converter is a web-based application built using pure HTML, CSS, and JavaScript that allows users to convert values between 50+ international currencies in real time.
+Designed with focus on:
 
-It consumes exchange rate data from a public API and provides a modern, responsive, and user-friendly interface.
+* Clean architecture
+* Performance
+* UX
+* Local persistence
 
-🚀 Features
-✅ Real-Time Conversion
+---
 
-Instant conversion based on the latest exchange rate.
+## 🚀 Features
 
-Auto-update when value or currency changes.
+### 🔄 Real-Time Conversion
 
-Automatic conversion when pressing Enter.
+* Instant rate calculation.
+* Auto-update on input change.
+* Converts when pressing **Enter**.
 
-🔄 Swap Button
+---
+
+### 🔁 Swap Button
 
 Instantly swaps base and target currencies.
 
-Automatically recalculates the conversion.
+---
 
-⭐ Favorites System
+### ⭐ Favorites
 
-Save frequently used currency pairs.
+* Save currency pairs.
+* Stored in `localStorage`.
+* Load and remove options.
 
-Persistent storage using localStorage.
+---
 
-Load favorite with one click.
+### ⚡ Quick Conversions
 
-Remove favorite option.
+Pre-configured common pairs for fast usage.
 
-Duplicate prevention.
+---
 
-⚡ Quick Conversions
+### 📋 Copy Button
 
-Pre-configured quick buttons:
+One-click copy with visual feedback.
 
-BRL → USD
+---
 
-USD → BRL
-
-BRL → EUR
-
-EUR → BRL
-
-BRL → GBP
-
-USD → EUR
-
-Single-click conversion.
-
-📋 Copy Result Button
-
-One-click copy of converted value.
-
-Visual feedback: “Copied!”
-
-Uses:
-
-Modern Clipboard API
-
-Fallback method for compatibility
-
-📊 Detailed Conversion Information
+### 📊 Detailed Information
 
 Displays:
 
-Converted value
+* Converted value
+* Applied rate
+* Calculation breakdown
+* Inverse rate
+* Timestamp
 
-Current exchange rate
-Example: 1 BRL = 0.2012 USD
+---
 
-Detailed calculation
-Example: 100 BRL × 0.201200 = 20.12 USD
+## 🧱 Tech Stack
 
-Inverse conversion
-Example: 1 USD = 4.97 BRL
 
-Last updated date and time
+* HTML5
+* CSS3
+* JavaScript ES6+
+* Fetch API
+* LocalStorage
 
-🌍 50+ Supported Currencies
 
-Includes:
+---
 
-BRL, USD, EUR, GBP, JPY
+## 🗂 Project Structure
 
-CAD, AUD, CHF
-
-MXN, ARS, CLP
-
-INR, KRW, SGD
-
-AED, SAR, TRY
-
-PLN, CZK, HUF
-
-and many more
-
-📱 Responsive Design
-
-Mobile-friendly layout.
-
-Responsive grid system.
-
-Modern dark-themed interface.
-
-🔎 SEO Integration
-
-Includes optimized content section with:
-
-Educational explanation about exchange rates
-
-Frequently asked questions
-
-Strategic keyword usage
-
-🧱 Technologies Used
-
-HTML5
-
-CSS3
-
-JavaScript (ES6+)
-
-LocalStorage
-
-Fetch API
-
-Exchange Rate API
-
-🗂 Project Structure
 currency-converter/
 │
 ├── index.html
 ├── style.css
 └── script.js
 
-🧠 Core Logic
 
-User inputs amount.
+---
 
-System captures base and target currencies.
+## 📌 Future Improvements
 
-Fetch request to exchange rate API.
-
-Calculation using returned rate.
-
-UI update.
-
-Favorites persisted locally.
-
-📌 Future Improvements
-
-Historical exchange chart
-
-Exchange rate caching
-
-PWA support
-
-Conversion history
-
-Light/Dark mode toggle
+* Historical chart
+* Rate caching
+* PWA support
+* Conversion history
+* Light/Dark toggle
+* i18n support
